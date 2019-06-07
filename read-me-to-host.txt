@@ -1,0 +1,4 @@
+install node js 
+download the files in the repository
+open the folder using terminal
+enter the command "npm start" to locally host the server
