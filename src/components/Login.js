@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Redirect } from 'react-router-dom'
 export default class Login extends Component {
     constructor(props){
         super(props)
@@ -20,16 +20,27 @@ export default class Login extends Component {
     submitForm(e){
         e.preventDefault()
         const { username,password }=this.state
+        //Login Data
+        if(username==='someone@someone.com' && password ==='password'){
+            this.setState({
+                loggedIn: true
+            })
+        }
     }
     render() {
+        if(this.state.loggedIn){
+            return <Redirect to="/admin" />
+        }
         return (
             <div>
                 LogIn
                 <form onSubmit={this.submitForm}>
 
                     <input type='text' placeholder='username' name='username' value={this.state.username} onChange={this.onChange} />
+                    <br/>
 
                     <input type='text' placeholder='password' name='password' value={this.state.password} onChange={this.onChange} />
+                    <br/>
 
                     <input type='submit'  />
 

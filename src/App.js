@@ -30,8 +30,8 @@ class App extends Component {
     return(
       <Switch>
         <Route exact path ="/" component={Login} />
-        <Route exact path ="/" component={Login} />
-        <Route exact path ="/" component={Login} />
+        <Route path ="/admin" component={Admin} />
+        <Route path ="/logout" component={Logout} />
       </Switch>
       
     );
