@@ -55,7 +55,7 @@ export default class Login extends Component {
                     <input type='text' placeholder='username' name='username' value={this.state.username} onChange={this.onChange} />
                     <br/>
 
-                    <input type='text' placeholder='password' name='password' value={this.state.password} onChange={this.onChange} />
+                    <input type='password' placeholder='password' name='password' value={this.state.password} onChange={this.onChange} />
                     <br/>
 
                     <input type='submit'/>
