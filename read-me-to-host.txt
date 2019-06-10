@@ -1,4 +1,6 @@
-install node js 
-download the files in the repository
-open the folder using terminal
-enter the command "npm start" to locally host the server
+How to run server from git clone of this Project ?
+    1) download the zip file.
+    2) extract the file in main directory.
+    3) use ternminal and navigate to the unzip folder.
+    4) use the command "npm install" to install all dependencies from package.json file.
+    5) use command "npm run" to run the local server.
