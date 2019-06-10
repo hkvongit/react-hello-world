@@ -1,3 +1,11 @@
+How to run server from git clone of this Project ?
+    1) download the zip file.
+    2) extract the file in main directory.
+    3) use ternminal and navigate to the unzip folder.
+    4) use the command "npm install" to install all dependencies from package.json file.
+    5) use command "npm run" to run the local server.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
