@@ -4,9 +4,11 @@ export default class Login extends Component {
     constructor(props){
         super(props)
         let loggedIn =false
+        
         this.state={
             username:'',
             password:'',
+            message:'',
             loggedIn
         }
         this.onChange = this.onChange.bind(this)
@@ -17,6 +19,13 @@ export default class Login extends Component {
             [e.target.name]: e.target.value
         })
     }
+
+    // invalid_details(){
+    //     this.setState({
+    //         message:'invalid details'
+    //     })
+    // }
+
     submitForm(e){
         e.preventDefault()
         const { username,password }=this.state
@@ -27,11 +36,17 @@ export default class Login extends Component {
                 loggedIn: true
             })
         }
+        else{ 
+            this.setState({
+            message:'invalid details'
+        })}
     }
     render() {
         if(this.state.loggedIn){
             return <Redirect to="/admin" />
         }
+
+
         return (
             <div>
                 LogIn
@@ -43,9 +58,10 @@ export default class Login extends Component {
                     <input type='text' placeholder='password' name='password' value={this.state.password} onChange={this.onChange} />
                     <br/>
 
-                    <input type='submit'  />
+                    <input type='submit'/>
 
                 </form>
+                <p>{this.state.message}</p>
             </div>
         )
     }
